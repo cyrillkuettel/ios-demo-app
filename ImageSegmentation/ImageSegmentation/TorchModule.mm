@@ -8,19 +8,18 @@
 #import "UIImageHelper.h"
 #import <CoreImage/CoreImage.h>
 #import <ImageIO/ImageIO.h>
-#import <Libtorch/Libtorch.h>
+#import <Libtorch-Lite/Libtorch-Lite.h>
 
 @implementation TorchModule {
 @protected
-    torch::jit::script::Module _impl;
+    torch::jit::mobile::Module _impl;
 }
 
 - (nullable instancetype)initWithFileAtPath:(NSString*)filePath {
     self = [super init];
     if (self) {
         try {
-            _impl = torch::jit::load(filePath.UTF8String);
-            _impl.eval();
+            _impl = torch::jit::_load_for_mobile(filePath.UTF8String);
         } catch (const std::exception& exception) {
             NSLog(@"%s", exception.what());
             return nil;
@@ -29,8 +28,7 @@
     return self;
 }
 
-- (unsigned char*)segmentImage:(void *)imageBuffer withWidth:(int)width withHeight:(int)height {
-    try {
+- (NSMutableData*)segmentImage:(void *)imageBuffer withWidth:(int)width withHeight:(int)height {    try {
         
         // see http://host.robots.ox.ac.uk:8080/pascal/VOC/voc2007/segexamples/index.html for the list of classes with indexes
         const int CLASSNUM = 21;
@@ -92,7 +90,7 @@
             }
         }
 
-        return buffer;
+        return data;
     } catch (const std::exception& exception) {
         NSLog(@"%s", exception.what());
     }
