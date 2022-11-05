@@ -9,14 +9,14 @@ class ViewController: UIViewController {
     private let imageHelper = UIImageHelper()
 
     private lazy var module: TorchModule = {
+        
         let modelName = "deeplabv3_scripted"
         
         if let filePath = Bundle.main.path(forResource: modelName, ofType: "ptl") {
-            // Ok, found the model resource
+            // Ok, found the model ressource
         } else {
             fatalError("Can't find the model file!")
         }
-        
         
         if let filePath = Bundle.main.path(forResource: modelName, ofType: "ptl"),
             let module = TorchModule(fileAtPath: filePath) {

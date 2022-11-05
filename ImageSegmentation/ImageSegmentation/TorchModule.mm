@@ -89,7 +89,6 @@
                 else if (maxi == SHEEP) buffer[n+2] = 255;
             }
         }
-
         return data;
     } catch (const std::exception& exception) {
         NSLog(@"%s", exception.what());

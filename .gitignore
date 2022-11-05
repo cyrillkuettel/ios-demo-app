@@ -37,3 +37,4 @@ Podfile.lock
 Carthage/Checkouts
 Carthage/Build
 
+**/*.ptl

@@ -19,7 +19,6 @@
 		265BB017253A7F0500467AC4 /* TorchModule.mm in Sources */ = {isa = PBXBuildFile; fileRef = 265BB015253A7F0500467AC4 /* TorchModule.mm */; };
 		265F9A6F2551CB3700B8F2EC /* dog.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 265F9A6E2551CB3700B8F2EC /* dog.jpg */; };
 		4CF6D5B7F9F7C432A995951C /* Pods_ImageSegmentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE5496AF03F738A31F7A1E4C /* Pods_ImageSegmentation.framework */; };
-		DD689B7F29100D0200F7FCB0 /* model.ptl in Resources */ = {isa = PBXBuildFile; fileRef = DD689B7E29100CE900F7FCB0 /* model.ptl */; };
 		DDCCBC6F29101D4F00AE3065 /* deeplabv3_scripted.ptl in Resources */ = {isa = PBXBuildFile; fileRef = DDCCBC6E29101D4F00AE3065 /* deeplabv3_scripted.ptl */; };
 /* End PBXBuildFile section */
 
@@ -41,7 +40,6 @@
 		265BB016253A7F0500467AC4 /* TorchModule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
 		265F9A6E2551CB3700B8F2EC /* dog.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = dog.jpg; sourceTree = "<group>"; };
 		8538B417EDCFEB8174C7B2EA /* Pods-ImageSegmentation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSegmentation.debug.xcconfig"; path = "Target Support Files/Pods-ImageSegmentation/Pods-ImageSegmentation.debug.xcconfig"; sourceTree = "<group>"; };
-		DD689B7E29100CE900F7FCB0 /* model.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = model.ptl; sourceTree = "<group>"; };
 		DDCCBC6E29101D4F00AE3065 /* deeplabv3_scripted.ptl */ = {isa = PBXFileReference; lastKnownFileType = file; path = deeplabv3_scripted.ptl; sourceTree = "<group>"; };
 		F36D100F284A500D6DA66ACE /* Pods-ImageSegmentation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImageSegmentation.release.xcconfig"; path = "Target Support Files/Pods-ImageSegmentation/Pods-ImageSegmentation.release.xcconfig"; sourceTree = "<group>"; };
 		FE5496AF03F738A31F7A1E4C /* Pods_ImageSegmentation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImageSegmentation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -121,7 +119,6 @@
 			isa = PBXGroup;
 			children = (
 				DDCCBC6E29101D4F00AE3065 /* deeplabv3_scripted.ptl */,
-				DD689B7E29100CE900F7FCB0 /* model.ptl */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -186,7 +183,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDCCBC6F29101D4F00AE3065 /* deeplabv3_scripted.ptl in Resources */,
-				DD689B7F29100D0200F7FCB0 /* model.ptl in Resources */,
 				265F9A6F2551CB3700B8F2EC /* dog.jpg in Resources */,
 				265BAFF4253A6A6900467AC4 /* LaunchScreen.storyboard in Resources */,
 				265BB008253A6B9600467AC4 /* deeplab.jpg in Resources */,
